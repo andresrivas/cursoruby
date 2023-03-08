@@ -1,0 +1,3 @@
+nombre, apellidos,dia,años 
+gfd,fddg,dfgd,2023
+df,df,d,2023

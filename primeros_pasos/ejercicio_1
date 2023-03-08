@@ -1,0 +1,4 @@
+a = "estamos"
+b = "aprendiendo"
+c = "ruby"
+puts "\"#{a}\n #{b}\n #{c}\" "
