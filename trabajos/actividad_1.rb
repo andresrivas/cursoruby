@@ -27,6 +27,9 @@ def reporte_usuarios
     lineas_archivo = leer_archivo_entero
     # imprimir lo que tiene lineas_archivo
 end
+
+
+
 #SE SOLICTA AL USURIO POR MEDIO DE UN MENU QUE DESEA REALIZAR
 print "CON EL SIGUIENTE  MENU  QUE OPCION DESEAS REALIZAR \n\n"
 #SE CREA UN CICLO DONDE LOS NUMEROS NO SEAN DIFERENTES DE 3
@@ -77,23 +80,25 @@ while opcion_1 != 3
                 linea = "#{usuario["nombre"]},#{usuario["apellido"]},#{usuario["dia"]},#{usuario["edad"]}\n"
                 file.write(linea)
             end
+
         end
-
-
+       
 #SI LA OPCION DADA ES 2 IMPRIMIR POR PANTALLA SI NO HAY REGISTROS 
 #O IMPRIMIER REGISTROAS SI YA HAY 
     elsif opcion_1 == 2
         puts "NO HAY USUARIOS REGISTRADOS INTENTA DE NUEVO" 
         #puts reporte_usuarios
-        reporte_usuarios
-
+        #reporte_usuarios
+        file = File.open(usuarios.txt)
     else
+
+
+
 #DE LO CONTRARIO SE IMPRIMIRA NO HAY USUARIOS REGISTRADOS
         puts "NO HAY USUARIOS REGISTRADOS INTENTA DE NUEVO" 
         
     end    
 end
-
 
     
     

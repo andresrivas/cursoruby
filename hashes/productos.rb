@@ -19,8 +19,8 @@ products.each do |product|
 
 end
 
-    personas.each do |persona|
-        puts persona[:name]
+    usuarios.each do |usuario|
+        puts usuario[:nombre]
         puts "  Id: #{persona[:id]}"
         puts "  Apellido: #{persona[:apellido]}"
         puts "  Cargo: #{persona[:cargo].join(", ")}"

@@ -1,3 +1,1 @@
 nombre, apellidos,dia,años
-andres ,rivas,19/07,45
-camilo,bermudez,23/2,238
