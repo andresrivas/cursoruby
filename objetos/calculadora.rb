@@ -37,3 +37,5 @@ puts "El resultado de la suma es #{resultado2.suma}"
 puts "El resultado de la resta es #{resultado2.resta}"
 puts "El resultado de la multiplicacion es #{resultado2.multiplicacion}"
 puts "El resultado de la division es #{resultado2.division}"
+
+
