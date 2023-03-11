@@ -12,10 +12,10 @@ class Parqueadero
     end
 end
 
-vehiculos = []
+
+
 print "INGRESE CUENTOS VEHICULOS DESEA REGISTRAR\n\n"
 opcion = gets.chomp.to_i
-
 opcion.times do 
     vehiculo = []
     print"INGRESE LOS DATOS DEL VEHICULO\n\n"
@@ -28,17 +28,19 @@ opcion.times do
     print "INGRESE  HORA DE ENTRADA\n"
     entrada = gets.chomp
     vehiculo << entrada
-    
-    vehiculos.push(vehiculo)
+   p vehiculo[0]
+   p vehiculo[1]
+   p vehiculo[2]
+   p vehiculo
 end
-p vehiculos
 
-usuario = Parqueadero.new(placa,tipo,entrada)
-puts usuario.placa
-puts usuario.tipo
-puts usuario.h_entrada
-puts usuario.h_salida 
-#puts usuario.salida_parqueadero
+
+vehiculo = Parqueadero.new(vehiculo[0],2,5)
+ 
+    puts vehiculo.placa 
+    puts vehiculo.tipo 
+    puts vehiculo.h_entrada 
+    #puts usuario.salida_parqueadero
 
 
 
