@@ -26,7 +26,7 @@ cupos << cupo
 print "INGRESE PLACA \n"
 placa = gets.chomp
 cupos each do |cupo|
-    cupo == placa 
+    cupo.placa == placa
     puts "#{h_entrada},#{placa}"
 end
 
@@ -36,9 +36,9 @@ end
 
        
 
-    print "INGRESE  HORA DE SALIDA\n"
-    salida = gets.chomp.to_i  
-    vehiculo << salida
+#print "INGRESE  HORA DE SALIDA\n"
+#salida = gets.chomp.to_i  
+#vehiculo << salida
 
 #p vehiculo
 
