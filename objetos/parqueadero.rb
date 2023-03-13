@@ -4,7 +4,7 @@ class Parqueadero
         @placa = placa
         @tipo = tipo
         @h_entrada = entrada
-        @h_salida = 0 
+        @h_salida = 0
     end
 
     def salida_parqueadero
@@ -22,28 +22,24 @@ entrada = gets.chomp.to_i
 
 cupo = Parqueadero.new(placa,tipo,entrada)
 cupos << cupo
+p cupos
+
 
 print "INGRESE PLACA \n"
 placa = gets.chomp
-cupos each do |cupo|
-    cupo.placa == placa
-    puts "#{h_entrada},#{placa}"
+cupos.each do |cupo|
+    if cupo.placa == placa
+        puts "#{cupo.placa}"
+    else
+        puts "PLACA NO EXISTE"
+    end
 end
 
-
- 
-
-
-       
-
-#print "INGRESE  HORA DE SALIDA\n"
-#salida = gets.chomp.to_i  
-#vehiculo << salida
-
-#p vehiculo
-
-#usuario = Salida_parqueadero.new(vehiculo[3], vehiculo[2])
-#puts usuario.salida_parqueadero
+print "INGRESE  HORA DE SALIDA\n"
+salida = gets.chomp.to_i 
+cupo.h_salida = salida
+salida = cupo.salida_parqueadero 
+puts"el #{cupo.tipo} de placa #{cupo.placa}  tuvo un uso del parqueadero de #{salida} horas"
 
 
 
