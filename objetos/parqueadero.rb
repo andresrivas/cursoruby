@@ -11,33 +11,38 @@ class Parqueadero
         @h_salida - @h_entrada 
     end
 end
+cupos = []
+print"INGRESE LOS DATOS DEL VEHICULO\n"
+print "INGRESE PLACA DEL VEHICULO\n"
+placa = gets.chomp
+print "INGRESE TIPO DE VEHICULO\n"
+tipo = gets.chomp
+print "INGRESE  HORA DE ENTRADA\n"
+entrada = gets.chomp.to_i  
 
-vehiculos = []
-print "INGRESE CUENTOS VEHICULOS DESEA REGISTRAR\n\n"
-opcion = gets.chomp.to_i
+cupo = Parqueadero.new(placa,tipo,entrada)
+cupos << cupo
 
-opcion.times do 
-    vehiculo = []
-    print"INGRESE LOS DATOS DEL VEHICULO\n\n"
-    print "INGRESE PLACA DEL VEHICULO\n"
-    placa = gets.chomp
-    vehiculo << placa
-    print "INGRESE TIPO DE VEHICULO\n"
-    tipo = gets.chomp
-    vehiculo << tipo
-    print "INGRESE  HORA DE ENTRADA\n"
-    entrada = gets.chomp
-    vehiculo << entrada
-    
-    vehiculos.push(vehiculo)
+print "INGRESE PLACA \n"
+placa = gets.chomp
+cupos each do |cupo|
+    cupo == placa 
+    puts "#{h_entrada},#{placa}"
 end
-p vehiculos
 
-usuario = Parqueadero.new(placa,tipo,entrada)
-puts usuario.placa
-puts usuario.tipo
-puts usuario.h_entrada
-puts usuario.h_salida 
+
+ 
+
+
+       
+
+    print "INGRESE  HORA DE SALIDA\n"
+    salida = gets.chomp.to_i  
+    vehiculo << salida
+
+#p vehiculo
+
+#usuario = Salida_parqueadero.new(vehiculo[3], vehiculo[2])
 #puts usuario.salida_parqueadero
 
 
