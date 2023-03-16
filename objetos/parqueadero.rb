@@ -12,28 +12,33 @@ class Parqueadero
     end
 end
 cupos = []
-print"INGRESE LOS DATOS DEL VEHICULO\n"
-print "INGRESE PLACA DEL VEHICULO\n"
-placa = gets.chomp
-print "INGRESE TIPO DE VEHICULO\n"
-tipo = gets.chomp
-print "INGRESE  HORA DE ENTRADA\n"
-entrada = gets.chomp.to_i  
+print "INGRESE CUENTOS VEHICULOS DESEA REGISTRAR\n\n"
+opcion = gets.chomp.to_i
+opcion.times do 
 
-cupo = Parqueadero.new(placa,tipo,entrada)
-cupos << cupo
-p cupos
+    print"INGRESE LOS DATOS DEL VEHICULO\n"
+    print "INGRESE PLACA DEL VEHICULO\n"
+    placa = gets.chomp
+    print "INGRESE TIPO DE VEHICULO\n"
+    tipo = gets.chomp
+    print "INGRESE  HORA DE ENTRADA\n"
+    entrada = gets.chomp.to_i  
 
-
-print "INGRESE PLACA \n"
-placa = gets.chomp
-cupos.each do |cupo|
-    if cupo.placa == placa
-        puts "#{cupo.placa}"
-    else
-        puts "PLACA NO EXISTE"
-    end
+    cupo = Parqueadero.new(placa,tipo,entrada)
+    cupos << cupo
 end
+    p cupos
+
+
+    print "INGRESE PLACA \n"
+    placa = gets.chomp
+    cupos.each do |cupo|
+        if cupo.placa == placa
+            puts "#{cupo.placa}"
+        else
+            puts "PLACA NO EXISTE"
+        end
+    end
 
 print "INGRESE  HORA DE SALIDA\n"
 salida = gets.chomp.to_i 
